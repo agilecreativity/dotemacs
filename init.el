@@ -30,11 +30,6 @@
       (concat user-emacs-directory "users/" user-login-name))
 (add-to-list 'load-path user-settings-dir)
 
-; ;; Add external projects to load path
-; (dolist (project (directory-files site-lisp-dir t "\\w+"))
-;   (when (file-directory-p project)
-;     (add-to-list 'load-path project)))
-
 ;; Save point position between sessions
 (require 'saveplace)
 (setq-default save-place t)
@@ -68,6 +63,7 @@
 ; (eval-after-load 'magit '(require 'setup-magit))
 ; (eval-after-load 'grep '(require 'setup-rgrep))
 ; (eval-after-load 'shell '(require 'setup-shell))
+
 ; (require 'setup-hippie)
 ; (require 'setup-yasnippet)
 ; (require 'setup-perspective)

@@ -11,49 +11,6 @@
 ;; Highlight current line
 (global-hl-line-mode 1)
 
-;; Set custom theme path
-(setq custom-theme-directory (concat user-emacs-directory "themes"))
-
-(dolist
-    (path (directory-files custom-theme-directory t "\\w+"))
-  (when (file-directory-p path)
-    (add-to-list 'custom-theme-load-path path)))
-
-;; Default theme
-(defun use-presentation-theme ()
-  (interactive)
-  (when (boundp 'magnars/presentation-font)
-    (set-face-attribute 'default nil :font magnars/presentation-font)))
-
-(defun use-default-theme ()
-  (interactive)
-  (load-theme 'default-black)
-  (when (boundp 'magnars/default-font)
-    (set-face-attribute 'default nil :font magnars/default-font)))
-
-(defun toggle-presentation-mode ()
-  (interactive)
-  (if (string= (frame-parameter nil 'font) magnars/default-font)
-      (use-presentation-theme)
-    (use-default-theme)))
-
-(global-set-key (kbd "C-<f9>") 'toggle-presentation-mode)
-
-;; You can just use this one directly!
-(cond
-  ((string-equal system-type "gnu/linux")
-    (progn
-      (set-frame-font "-PfEd-Inconsolata-bold-normal-normal-*-20-*-*-*-m-0-iso10646-1")
-      (set-default-font "-PfEd-Inconsolata-bold-normal-normal-*-20-*-*-*-m-0-iso10646-1")
-      (load-theme 'zenburn)))
-  ((string-equal system-type "darwin")
-    (progn
-      (set-frame-font "-PfEd-Inconsolata-normal-normal-normal-*-10-*-*-*-m-0-iso10646-1")
-      (set-default-font "-PfEd-Inconsolata-normal-normal-normal-*-10-*-*-*-m-0-iso10646-1")
-      (load-theme 'zenburn)
-      ;;(use-default-theme)
-    )))
-
 ;; Don't defer screen updates when performing operations
 (setq redisplay-dont-pause t)
 
