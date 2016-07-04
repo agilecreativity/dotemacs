@@ -9,3 +9,4 @@ Make use of [[https://github.com/cask/cask][Cask]] to keep the installation clea
 ** Tips and Tricks
 
  - Use Org mode together with [[file:init.org][init.org]] to generate the config
+ - See [[https://cask.github.io/usage.html][Cask usage page]] for details
