@@ -25,5 +25,6 @@
 (depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "yasnippet")
+
 ;; My custom package
 (depends-on "zenburn-theme")
