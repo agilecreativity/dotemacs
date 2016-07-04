@@ -4,6 +4,8 @@
 My new Emacs configuration, hopefully cleaner than the previous version.
 Let's start from scratch and add more to this list only when required.
 
-** TODOs
+Make use of [[https://github.com/cask/cask][Cask]] to keep the installation clean.
 
- - Use Org mode. [[file:init.el][init.el]] to generate the config
+** Tips and Tricks
+
+ - Use Org mode together with [[file:init.org][init.org]] to generate the config
