@@ -49,3 +49,5 @@ flycheck_*.el
 .places
 history
 recentf
+ido.last
+smex-items

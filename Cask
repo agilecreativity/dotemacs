@@ -32,6 +32,7 @@
 (depends-on "edn")
 (depends-on "elisp-slime-nav")
 (depends-on "epl")
+(depends-on "eproject")
 (depends-on "exec-path-from-shell")
 (depends-on "expand-region")
 (depends-on "f")
