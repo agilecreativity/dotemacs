@@ -1,0 +1,9 @@
+#+TITLE: My Emacs Configuration
+#+AUTHOR: Burin Choomnuan
+
+My new Emacs configuration, hopefully cleaner than the previous version.
+Let's start from scratch and add more to this list only when required.
+
+** TODOs
+
+ - Use Org mode. [[file:init.el][init.el]] to generate the config
