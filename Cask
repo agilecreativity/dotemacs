@@ -28,3 +28,17 @@
 
 ;; My custom package
 (depends-on "zenburn-theme")
+(depends-on "edn")
+(depends-on "inflections")
+(depends-on "hydra")
+(depends-on "paredit")
+
+;; From site-lisp
+(depends-on "ace-jump-mode")
+(depends-on "annoying-arrows-mode")
+(depends-on "bash-completion")
+(depends-on "browse-kil-ring")
+(depends-on "buster-mode")
+(depends-on "buster-snippets")
+(depends-on "change-inner")
+(depends-on "clj-refactor")
