@@ -45,5 +45,7 @@ flycheck_*.el
 # projectiles files
 .projectile
 
-# Save places
+# Misc files
 .places
+history
+recentf

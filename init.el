@@ -46,103 +46,14 @@
 ;; Or are we on linux?
 (setq is-linux (equal system-type 'gnu/linux))
 
-; ;; Setup packages
-; (require 'setup-package)
-;
-; ;; Install extensions if they're missing
-; (defun init--install-packages ()
-;   (packages-install
-;    '(magit
-;      edn
-;      inflections
-;      hydra
-;      paredit
-;      move-text
-;      gist
-;      htmlize
-;      visual-regexp
-;      markdown-mode
-;      fill-column-indicator
-;      flycheck
-;      flycheck-pos-tip
-;      flycheck-clojure
-;      flx
-;      f
-;      flx-ido
-;      dired-details
-;      css-eldoc
-;      yasnippet
-;      smartparens
-;      ido-vertical-mode
-;      ido-at-point
-;      simple-httpd
-;      guide-key
-;      nodejs-repl
-;      restclient
-;      highlight-escape-sequences
-;      whitespace-cleanup-mode
-;      elisp-slime-nav
-;      dockerfile-mode
-;      clojure-mode
-;      clojure-mode-extra-font-locking
-;      groovy-mode
-;      prodigy
-;      cider
-;      yesql-ghosts
-;      string-edit
-;      ;; Some more packages that I need
-;      atom-dark-theme
-;      cyberpunk-theme
-;      molokai-theme
-;      seoul256-theme
-;      solarized-theme
-;      zenburn-theme
-;      ;; Misc packages
-;      ag
-;      github-browse-file
-;      git-timemachine
-;      ;; Ruby development
-;      bundler
-;      goto-gem
-;      ;helm-rails
-;      ;helm-rb
-;      inf-ruby
-;      projectile
-;      projectile-rails
-;      rbenv
-;      robe
-;      rspec-mode
-;      ruby-additional
-;      ruby-block
-;      ruby-hash-syntax
-;      ruby-refactor
-;      ruby-tools
-;      smartscan ;; Quickly jumps between symbols found at point
-;      yaml-mode
-;      yari
-;      ;; Misc packages
-;      command-log-mode ;; log the command for screencast/etc
-;      feature-mode
-;      helm-ag
-;      rainbow-mode
-;      rainbow-delimiters
-;      tagedit ;; paredit like for html
-;      )))
-;
-; (condition-case nil
-;     (init--install-packages)
-;   (error
-;    (package-refresh-contents)
-;    (init--install-packages)))
-;
-; ;; Lets start with a smattering of sanity
-; (require 'sane-defaults)
-;
-; ;; Setup environment variables from the user's shell.
-; (when is-mac
-;   (require-package 'exec-path-from-shell)
-;   (exec-path-from-shell-initialize))
-;
+;; Lets start with a smattering of sanity
+(require 'sane-defaults)
+
+;; Setup environment variables from the user's shell.
+(when is-mac
+  (require-package 'exec-path-from-shell)
+  (exec-path-from-shell-initialize))
+
 ; ;; guide-key
 ; (require 'guide-key)
 ; (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8" "C-x +"))
