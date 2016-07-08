@@ -17,7 +17,10 @@
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;; starting directory
-;(setq default-directory (concat (getenv "HOME") "/codes/others"))
+;(setq default-directory (concat (getenv "HOME") "/codes/others/gh-utils"))
+
+;; Make sure that the `lein` command is in our exec-path
+(add-to-list 'exec-path "~/apps/dotfiles/bin")
 
 ;; Add sensible default settings
 (sensible-defaults/open-files-from-home-directory)
