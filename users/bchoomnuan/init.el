@@ -36,3 +36,7 @@
 
 ;; Experimental for Org mode
 (setq org-cycle-emulate-tab 'white)
+
+;; Toggle neotree with <f8>
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
