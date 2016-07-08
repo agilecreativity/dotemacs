@@ -1,14 +1,13 @@
 #+TITLE: My Emacs Configuration
 #+AUTHOR: Burin Choomnuan
 
-My new Emacs configuration, hopefully cleaner than the previous version.
-Let's start from scratch and add more to this list only when required.
+This is my Emacs configuration based on the excellent config by [[https://github.com/magnars/.emacs.d][Magnar Sveen]].
+I am using [[https://github.com/cask/cask][Cask]] as the package manager to keep
+the installation clean and portable.
+It has been tested on [[https://www.archlinux.org/][Arch Linux]] with Emacs version 24.5.1 but it should
+work also on MacOs.
 
-Make use of [[https://github.com/cask/cask][Cask]] to keep the installation clean.
+** Basic Installation
 
-** Tips and Tricks
-
- - Use Org mode together with [[file:init.org][init.org]] to generate the config
+ - Install the [[https://cask.github.io/][Cask]]
  - See [[https://cask.github.io/usage.html][Cask usage page]] for details
-
-
