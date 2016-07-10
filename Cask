@@ -31,6 +31,7 @@
 (depends-on "datomic-snippets")
 (depends-on "demo-it")
 (depends-on "dired-details")
+(depends-on "disable-mouse")
 (depends-on "dockerfile-mode")
 (depends-on "drag-stuff")
 (depends-on "edn")

@@ -40,3 +40,7 @@
 ;; Toggle neotree with <f8>
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
+
+;; May be it is a good idea to disable the mouse as we have bigger touchpad nowaday
+(require 'disable-mouse)
+(global-disable-mouse-mode)
