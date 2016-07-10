@@ -21,6 +21,7 @@
 (depends-on "clj-refactor")
 (depends-on "clojure-mode")
 (depends-on "clojure-mode-extra-font-locking")
+(depends-on "color-theme-sanityinc-solarized")
 (depends-on "color-theme-sanityinc-tomorrow")
 (depends-on "command-log-mode")
 (depends-on "css-eldoc")

@@ -7,9 +7,11 @@
 (load custom-file)
 
 (require 'pallet)
-(require 'zenburn-theme)
 
+;; Use zenburn as default theme can be override in `users/<username>/init.el`
+(require 'zenburn-theme)
 (load-theme 'zenburn)
+
 (set-frame-font "Source Code Pro Bold 14" nil t)
 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -183,17 +185,6 @@
 ;; Conclude init by setting up specifics for the current user
 (when (file-exists-p user-settings-dir)
   (mapc 'load (directory-files user-settings-dir nil "^[^#].*el$")))
-
-;; Experimental {{
-;; NOTE: this will interfere with the flow of paredit so disable for now
-;; From: https://www.gnu.org/software/emacs/manual/html_node/efaq/Matching-parentheses.html
-;(global-set-key "%" 'match-paren)
-;(defun match-paren (arg)
-;  "Go to the matching paren if on a paren; otherwise insert %."
-;  (interactive "p")
-;  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
-;        ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
-;        (t (self-insert-command (or arg 1)))))
 
 ;; Better default
 (setq scroll-margin 5
