@@ -1,3 +1,7 @@
+;; Some theme and fonts
+(load-theme 'misterioso)
+(set-frame-font "Source Code Pro Bold 14" nil t)
+
 ;; Default js indentation levels
 (setq-default js2-basic-offset 2)
 (setq js-indent-level 2)

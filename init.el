@@ -12,6 +12,7 @@
 (require 'zenburn-theme)
 (load-theme 'zenburn)
 
+;; Sensible fonts on Linux, override in `hosts/<machine-name>` as required
 (set-frame-font "Source Code Pro Bold 14" nil t)
 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -37,8 +38,13 @@
     (add-to-list 'load-path project)))
 
 ;; Settings for currently logged in user
+; (setq user-settings-dir
+;       (concat user-emacs-directory "users/" user-login-name))
+; (add-to-list 'load-path user-settings-dir)
+
+;; Use settings based on the the machine I am currently on e.g. $hostname
 (setq user-settings-dir
-      (concat user-emacs-directory "users/" user-login-name))
+      (concat user-emacs-directory "hosts/" system-name))
 (add-to-list 'load-path user-settings-dir)
 
 ;; Save point position between sessions
