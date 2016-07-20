@@ -62,6 +62,7 @@
                  "/generated"
                  "/resources/public/js/compiled"
                  "/.repl"
-                 "/.tmp")))
+                 "/.tmp"
+                 "/tmp")))
 
 (provide 'setup-ffip)

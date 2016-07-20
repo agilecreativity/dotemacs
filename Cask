@@ -127,6 +127,7 @@
 (depends-on "ruby-refactor")
 (depends-on "ruby-tools")
 (depends-on "s")
+(depends-on "scss-mode")
 (depends-on "seoul256-theme")
 (depends-on "shell-command")
 (depends-on "simple-httpd")

@@ -1,5 +1,5 @@
 ;; Some theme and fonts
-(load-theme 'misterioso)
+;(load-theme 'misterioso)
 (set-frame-font "Source Code Pro Bold 14" nil t)
 
 ;; Default js indentation levels
