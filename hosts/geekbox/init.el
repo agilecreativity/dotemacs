@@ -61,3 +61,12 @@
 
 ;; Let's try different theme
 ;(load-theme 'sanityinc-tomorrow-night t)
+
+;; Let's try to pretty print the result in Cider REPL
+(setq cider-repl-use-pretty-printing t)
+
+;; Let make the result look pretty
+(setq cider-repl-result-prefix ";; => ")
+
+;; See: [official documentation](https://cider.readthedocs.io/en/latest/configuration/)
+(setq cider-eval-result-prefix ";; => ")
