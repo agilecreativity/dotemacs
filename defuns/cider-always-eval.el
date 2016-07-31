@@ -111,9 +111,9 @@
     (kill-line))
   (cider-eval-last-sexp 4)    ; Evaluate and insert into buffer
   (insert " ; => ")           ; Turn the evaluation into a comment
-                                        ; TODO: Call `cider-interactive-eval'.
+                              ;; TODO: Call `cider-interactive-eval'.
   (sit-for .1)                ; Wait for results... hrm... Don't likey
-                                        ; TODO: Wait until completed
+                              ;; TODO: Wait until completed
   (end-of-line))
 
 (defun cider-eval-expression-collection ()
