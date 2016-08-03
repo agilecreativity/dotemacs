@@ -46,7 +46,7 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 (custom-set-variables
-  '(neo-window-position (quote right)))
+  '(neo-window-position (quote left)))
 (setq neo-smart-open t)
 
 ;; NOTE: this will interfere with the flow of paredit so disable for now
