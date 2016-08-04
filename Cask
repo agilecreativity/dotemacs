@@ -126,6 +126,7 @@
 (depends-on "rspec-mode")
 (depends-on "ruby-additional")
 (depends-on "ruby-block")
+(depends-on "ruby-end")
 (depends-on "ruby-hash-syntax")
 (depends-on "ruby-refactor")
 (depends-on "ruby-tools")
