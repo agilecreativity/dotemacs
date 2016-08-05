@@ -3,6 +3,7 @@
 
 (depends-on "ace-jump-mode")
 (depends-on "ag")
+(depends-on "aggressive-indent")
 (depends-on "angular-snippets")
 (depends-on "annoying-arrows-mode")
 (depends-on "apache-mode")
