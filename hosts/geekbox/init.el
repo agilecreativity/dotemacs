@@ -70,3 +70,8 @@
 
 ;; See: [official documentation](https://cider.readthedocs.io/en/latest/configuration/)
 (setq cider-eval-result-prefix ";; => ")
+
+;; Let's try aggressive-indent mode
+(add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
+(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+(add-hook 'ruby-mode-hook #'aggressive-indent-mode)
