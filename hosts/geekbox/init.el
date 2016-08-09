@@ -46,7 +46,8 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 (custom-set-variables
-  '(neo-window-position (quote right)))
+ ;; Default is to the left
+ '(neo-window-position (quote left)))
 (setq neo-smart-open t)
 
 ;; NOTE: this will interfere with the flow of paredit so disable for now
@@ -60,7 +61,7 @@
                                         ; (global-set-key "%" 'match-paren)
 
 ;; Let's try different theme
-(load-theme 'sanityinc-tomorrow-night t)
+;;(load-theme 'sanityinc-tomorrow-night t)
 
 ;; Let's try to pretty print the result in Cider REPL
 (setq cider-repl-use-pretty-printing t)
