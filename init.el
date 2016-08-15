@@ -13,7 +13,7 @@
 (load-theme 'zenburn)
 
 ;; Sensible fonts on Linux, override in `hosts/<machine-name>` as required
-(set-frame-font "Source Code Pro Bold 14" nil t)
+(set-frame-font "Source Code Pro Bold 13" nil t)
 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))

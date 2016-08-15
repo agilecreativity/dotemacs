@@ -47,7 +47,7 @@
 (global-set-key [f8] 'neotree-toggle)
 (custom-set-variables
  ;; Default is to the left
- '(neo-window-position (quote left)))
+ '(neo-window-position (quote right)))
 (setq neo-smart-open t)
 
 ;; NOTE: this will interfere with the flow of paredit so disable for now
@@ -76,3 +76,6 @@
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
                                         ;(add-hook 'ruby-mode-hook #'aggressive-indent-mode)
+
+;; Hook up the projectile
+(add-hook 'projectile-mode-hook 'projectile-rails-on)

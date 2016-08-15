@@ -51,6 +51,13 @@
 (add-to-list 'auto-mode-alist '("capfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
 
+;; https://github.com/asok/projectile-rails#debugging
+;; https://lorefnon.me/2014/02/02/configuring-emacs-for-rails.html
+(projectile-global-mode)
+(add-hook 'after-init-hook 'inf-ruby-switch-setup)
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
+(add-hook 'ruby-mode-hook 'projectile-rails-on)
+
 ;; Puppet
 (autoload 'puppet-mode "puppet-mode")
 (add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
