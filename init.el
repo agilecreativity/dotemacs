@@ -1,4 +1,3 @@
-;; See: http://www.swaroopch.com/2013/10/17/emacs-configuration-tutorial/
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 

@@ -18,10 +18,6 @@
 (autoload 'feature-mode "feature-mode")
 (add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
 
-;; Adventur
-(autoload 'adventur-mode "adventur-mode")
-(add-to-list 'auto-mode-alist '("\\.adv$" . adventur-mode))
-
 ;; Jade and Stylus (sws = significant whitespace)
 (autoload 'sws-mode "sws-mode")
 (autoload 'jade-mode "jade-mode")
@@ -33,11 +29,6 @@
 (add-to-list 'auto-mode-alist '("\\.tag$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.vm$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs$" . html-mode))
-
-;; JSP
-(autoload 'crappy-jsp-mode "crappy-jsp-mode")
-(add-to-list 'auto-mode-alist '("\\.jsp$" . crappy-jsp-mode))
-(add-to-list 'auto-mode-alist '("\\.jspf$" . crappy-jsp-mode))
 
 ;; Ruby
 (autoload 'rhtml-mode "rhtml-mode")
@@ -51,12 +42,16 @@
 (add-to-list 'auto-mode-alist '("capfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
 
+;; Make projectile-rails works better
 ;; https://github.com/asok/projectile-rails#debugging
 ;; https://lorefnon.me/2014/02/02/configuring-emacs-for-rails.html
+;; (add-hook 'ruby-mode-hook 'projectile-rails-on)
 (projectile-global-mode)
 (add-hook 'after-init-hook 'inf-ruby-switch-setup)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
-(add-hook 'ruby-mode-hook 'projectile-rails-on)
+(autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
+(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+(add-hook 'after-init-hook 'inf-ruby-switch-setup)
 
 ;; Puppet
 (autoload 'puppet-mode "puppet-mode")
@@ -90,9 +85,6 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.jshintrc$" . javascript-mode))
 (add-to-list 'magic-mode-alist '("#!/usr/bin/env node" . js2-mode))
-
-;; Configuration files
-(add-to-list 'auto-mode-alist '("\\.offlineimaprc$" . conf-mode))
 
 ;; Snippets
 (add-to-list 'auto-mode-alist '("yasnippet/snippets" . snippet-mode))
