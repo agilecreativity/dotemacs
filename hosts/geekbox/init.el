@@ -51,16 +51,6 @@
  '(neo-window-position (quote left)))
 (setq neo-smart-open t)
 
-;; NOTE: this will interfere with the flow of paredit so disable for now
-;; From: https://www.gnu.org/software/emacs/manual/html_node/efaq/Matching-parentheses.html
-                                        ; (defun match-paren (arg)
-                                        ;  "Go to the matching paren if on a paren; otherwise insert %."
-                                        ;  (interactive "p")
-                                        ;  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
-                                        ;        ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
-                                        ;        (t (self-insert-command (or arg 1)))))
-                                        ; (global-set-key "%" 'match-paren)
-
 ;; Let's try different theme
 ;;(load-theme 'sanityinc-tomorrow-night t)
 
@@ -76,7 +66,7 @@
 ;; Let's try aggressive-indent mode
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
-                                        ;(add-hook 'ruby-mode-hook #'aggressive-indent-mode)
+;;(add-hook 'ruby-mode-hook #'aggressive-indent-mode)
 
 ;; Hook up the projectile
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
