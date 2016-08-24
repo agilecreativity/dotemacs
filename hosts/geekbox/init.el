@@ -1,6 +1,7 @@
 ;; Some theme and fonts
-;(load-theme 'misterioso)
-(set-frame-font "Source Code Pro Bold 14" nil t)
+;;(load-theme 'misterioso)
+;; Work best on big monitor screen e.g. 24+ inch monitor
+(set-frame-font "Source Code Pro Bold 12" nil t)
 
 ;; Default js indentation levels
 (setq-default js2-basic-offset 2)
@@ -47,7 +48,7 @@
 (global-set-key [f8] 'neotree-toggle)
 (custom-set-variables
  ;; Default is to the left
- '(neo-window-position (quote right)))
+ '(neo-window-position (quote left)))
 (setq neo-smart-open t)
 
 ;; NOTE: this will interfere with the flow of paredit so disable for now
