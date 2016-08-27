@@ -10,6 +10,7 @@
 (depends-on "apache-mode")
 (depends-on "async")
 (depends-on "atom-dark-theme")
+(depends-on "auto-complete")
 (depends-on "auto-complete-exuberant-ctags")
 (depends-on "bash-completion")
 (depends-on "bind-key")
