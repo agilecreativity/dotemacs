@@ -1,7 +1,7 @@
 ;; Some theme and fonts
 ;;(load-theme 'misterioso)
-;; Work best on big monitor screen e.g. 24+ inch monitor
-(set-frame-font "Source Code Pro Bold 12" nil t)
+;; Work best on big monitor screen e.g. 12 inc is good with 24+ inch monitor
+(set-frame-font "Source Code Pro Bold 14" nil t)
 
 ;; Default js indentation levels
 (setq-default js2-basic-offset 2)
