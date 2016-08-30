@@ -83,6 +83,7 @@
 (depends-on "ivy")
 (depends-on "jade-mode")
 (depends-on "jdee")
+(depends-on "js2-mode")
 (depends-on "js2-refactor")
 (depends-on "jump-char")
 (depends-on "logito")
