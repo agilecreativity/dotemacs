@@ -116,6 +116,7 @@
 (depends-on "popup")
 (depends-on "popwin")
 (depends-on "pos-tip")
+(depends-on "powershell")
 (depends-on "prodigy")
 (depends-on "projectile")
 (depends-on "projectile-rails")
