@@ -32,6 +32,7 @@
 (depends-on "ctags")
 (depends-on "ctags-update")
 (depends-on "cyberpunk-theme")
+(depends-on "darkokai-theme")
 (depends-on "dash")
 (depends-on "datomic-snippets")
 (depends-on "demo-it")
