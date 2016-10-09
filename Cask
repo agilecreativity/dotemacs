@@ -8,6 +8,7 @@
 (depends-on "angular-snippets")
 (depends-on "annoying-arrows-mode")
 (depends-on "apache-mode")
+(depends-on "arduino-mode")
 (depends-on "async")
 (depends-on "atom-dark-theme")
 (depends-on "auto-complete")
