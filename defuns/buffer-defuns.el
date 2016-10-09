@@ -168,3 +168,11 @@ Including indent-buffer, which should not be called automatically on save."
          (files (mapcar 'car recent-files))
          (file (completing-read "Choose recent file: " files)))
     (find-file (cdr (assoc file recent-files)))))
+
+(defun compress-blank-lines()
+  "Replace multiple blank lines with one"
+  (interactive)
+  (goto-char (point-min))
+  (while (re-search-forward "\\(^\\s-*$\\)\n" nil t)
+    (replace-match "\n")
+    (forward-char 1)))
