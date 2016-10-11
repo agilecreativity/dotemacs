@@ -169,10 +169,53 @@ Including indent-buffer, which should not be called automatically on save."
          (file (completing-read "Choose recent file: " files)))
     (find-file (cdr (assoc file recent-files)))))
 
-(defun compress-blank-lines()
-  "Replace multiple blank lines with one"
-  (interactive)
-  (goto-char (point-min))
-  (while (re-search-forward "\\(^\\s-*$\\)\n" nil t)
-    (replace-match "\n")
-    (forward-char 1)))
+;; See: http://ergoemacs.org/emacs/elisp_compact_empty_lines.html
+(defun xah-clean-empty-lines (&optional *begin *end *n)
+  "Replace repeated blank lines to just 1.
+Works on whole buffer or text selection, respects `narrow-to-region'.
+
+*N is the number of newline chars to use in replacement.
+If 0, it means lines will be joined.
+By befault, *N is 2. It means, 1 visible blank line.
+
+URL `http://ergoemacs.org/emacs/elisp_compact_empty_lines.html'
+Version 2016-10-07"
+  (interactive
+   (if (region-active-p)
+       (list (region-beginning) (region-end))
+     (list (point-min) (point-max))))
+  (when (null *begin)
+    (setq *begin (point-min) *end (point-max)))
+  (save-excursion
+    (save-restriction
+      (narrow-to-region *begin *end)
+      (progn
+        (goto-char (point-min))
+        (while (search-forward-regexp "\n\n\n+" nil "noerror")
+          (replace-match (make-string (if (null *n) 2 *n ) 10)))))))
+
+(defun xah-clean-whitespace (&optional *begin *end)
+  "Delete trailing whitespace, and replace repeated blank lines to just 1.
+Only space and tab is considered whitespace here.
+Works on whole buffer or text selection, respects `narrow-to-region'.
+
+URL `http://ergoemacs.org/emacs/elisp_compact_empty_lines.html'
+Version 2016-10-07"
+  (interactive
+   (if (region-active-p)
+       (list (region-beginning) (region-end))
+     (list (point-min) (point-max))))
+  (when (null *begin)
+    (setq *begin (point-min)  *end (point-max)))
+  (save-excursion
+    (save-restriction
+      (narrow-to-region *begin *end)
+      (xah-clean-empty-lines (point-min) (point-max) )
+      (progn
+        (goto-char (point-min))
+        (while (search-forward-regexp "[ \t]+\n" nil "noerror")
+          (replace-match "\n")))
+      (progn
+        (goto-char (point-max))
+        (while (equal (char-before) 32) ; char 32 is space
+          (delete-char -1))))))

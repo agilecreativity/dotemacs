@@ -140,4 +140,6 @@
 
 (add-to-list 'find-file-not-found-functions 'my-create-non-existent-directory)
 
+(add-hook 'before-save-hook 'xah-clean-whitespace)
+
 (provide 'sane-defaults)
