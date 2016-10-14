@@ -61,6 +61,7 @@
 (autoload 'groovy-mode "groovy-mode")
 (add-to-list 'auto-mode-alist '("\\.groovy$" . groovy-mode))
 (add-to-list 'auto-mode-alist '("\\.gradle$" . groovy-mode))
+(add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
 
 ;; Scala
 (autoload 'scala-mode "scala-mode2")

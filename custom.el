@@ -9,7 +9,7 @@
  '(neo-window-position (quote left))
  '(package-selected-packages
    (quote
-    (arduino-mode json-reformat aws-ec2 helm-aws darkokai-theme powershell package-build shut-up epl git commander f dash s))))
+    (emms-info-mediainfo arduino-mode json-reformat aws-ec2 helm-aws darkokai-theme powershell package-build shut-up epl git commander f dash s))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
