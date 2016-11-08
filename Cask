@@ -128,6 +128,7 @@
 (depends-on "projectile-rails")
 (depends-on "puppet-mode")
 (depends-on "queue")
+(depends-on "rainbow-blocks")
 (depends-on "rainbow-delimiters")
 (depends-on "rainbow-mode")
 (depends-on "rake")
