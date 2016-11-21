@@ -51,3 +51,7 @@ history
 recentf
 ido.last
 smex-items
+.mc-lists.el
+abbrev_defs
+projectile-bookmarks.eld
+semanticdb/

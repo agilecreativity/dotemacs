@@ -1,4 +1,0 @@
-## Test commit files for Jenkins
-
-- will be deleted when done
-- 2nd test commit
