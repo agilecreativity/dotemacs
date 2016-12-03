@@ -87,7 +87,7 @@
 (depends-on "inflections")
 (depends-on "ivy")
 (depends-on "jade-mode")
-(depends-on "jdee")
+;;(depends-on "jdee")
 (depends-on "js2-mode")
 (depends-on "js2-refactor")
 (depends-on "json-reformat")
